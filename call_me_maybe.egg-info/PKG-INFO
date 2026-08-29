@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: call-me-maybe
+Version: 0.1.0
+Summary: Constrained decoding for function calling with Qwen3-0.6B
+Requires-Python: >=3.10
+Requires-Dist: numpy>=1.26
+Requires-Dist: pydantic>=2.6
+Requires-Dist: torch>=2.2
+Requires-Dist: transformers>=4.40
+Requires-Dist: huggingface_hub>=0.23

@@ -1,0 +1,9 @@
+[
+  { "prompt": "What is the sum of 2 and 3?" },
+  { "prompt": "What is the sum of 265 and 345?" },
+  { "prompt": "Greet shrek" },
+  { "prompt": "Greet john" },
+  { "prompt": "Reverse the string 'hello'" },
+  { "prompt": "Is 42 an even number?" },
+  { "prompt": "What's the weather like today?" }
+]

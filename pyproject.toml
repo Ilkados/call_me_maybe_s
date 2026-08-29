@@ -1,0 +1,27 @@
+[project]
+name = "call-me-maybe"
+version = "0.1.0"
+description = "Constrained decoding for function calling with Qwen3-0.6B"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.26",
+    "pydantic>=2.6",
+    # required by the vendored llm_sdk/ package to load and run the model.
+    # never imported directly anywhere in src/ — only llm_sdk touches these.
+    "torch>=2.2",
+    "transformers>=4.40",
+    "huggingface_hub>=0.23",
+]
+
+[dependency-groups]
+dev = [
+    "flake8>=7.0",
+    "mypy>=1.10",
+]
+
+[tool.setuptools]
+packages = ["src"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
