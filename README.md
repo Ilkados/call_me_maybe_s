@@ -16,7 +16,7 @@ Given a prompt like `"What is the sum of 2 and 3?"`, the system does not answer 
 }
 ```
 
-The core challenge: small models (0.6B parameters) are unreliable at producing valid JSON when prompted freely — they succeed roughly 30% of the time. This project achieves near-perfect reliability by implementing constrained decoding, a technique that controls token selection at every generation step rather than relying on the model to spontaneously produce correct structure.
+The generator restricts token choices while it builds a call. A structurally valid call can still contain the wrong argument value. The project’s recorded evaluation below includes an example where the generated file path lost its leading slash.
 
 ## Instructions
 
@@ -27,7 +27,7 @@ The core challenge: small models (0.6B parameters) are unreliable at producing v
 
 ### Installation
 
-Clone the repository and sync dependencies — this is the only step required:
+From the repository root, sync dependencies. The first model run also needs access to the model weights, which may require a download:
 
 ```bash
 uv sync
@@ -116,7 +116,7 @@ Before any generation begins, a hand-constructed prompt is assembled: task instr
 
 ## Performance Analysis
 
-Tested against the moulinette evaluation tool:
+Results recorded by the project author using the moulinette evaluation tool:
 
 | Set | Score |
 |---|---|
